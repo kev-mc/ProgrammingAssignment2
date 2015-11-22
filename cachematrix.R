@@ -1,6 +1,6 @@
+## Mechanism to cache the inverse of a matrix
 
-
-## Create a list that acts as a wrapper object to cache a matrix and its inverse
+## Create a list that acts as a wrapper object to cache the original matrix and its inverse
 makeCacheMatrix <- function(x = matrix()) {
   # initial value of the inverse is null
   inv <- NULL
@@ -18,7 +18,7 @@ makeCacheMatrix <- function(x = matrix()) {
   setinverse <- function(i) inv <<- i
   getinverse <- function() inv
   
-  # create (and return) a list that exposes the getter and setter functions
+  # create (and return) the list that exposes the getter and setter functions
   list(set = set, get = get,
        setinverse = setinverse,
        getinverse = getinverse)
